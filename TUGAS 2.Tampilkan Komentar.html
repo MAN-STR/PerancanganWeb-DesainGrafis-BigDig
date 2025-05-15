@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog dengan Komentar Tersembunyi</title>
+    <style>
+        #komentarSection {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            display: none; 
+        }
+        
+        .komentar {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        
+        #toggleKomentarBtn {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #toggleKomentarBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Judul Artikel Lingkungan</h1>
+        <p>Cara Mengatasi Pencemaran Tanah  
+
+Pencemaran tanah mengancam kesehatan manusia dan ekosistem. Berikut solusi singkat untuk mengurangi dampaknya:  
+
+<h1>1. Terapkan 3R Reduce, Reuse, Recycle</h1>  
+Kurangi limbah dengan menggunakan kembali barang dan mendaur ulang sampah. Edukasi masyarakat melalui kampanye dan program lingkungan.  
+
+<h1>2. Kurangi Kemasan Sekali Pakai</h1>
+Gunakan wadah reusable dan pilih produk biodegradable untuk mengurangi sampah yang mencemari tanah.  
+
+<h1>3. Pertanian Berkelanjutan</h1>
+Kurangi pupuk kimia dan pestisida berlebihan. Gunakan rotasi tanaman dan pupuk organik untuk menjaga kesuburan tanah.  
+
+<h1>4. Jaga Lapisan Humus</h1>
+Lakukan pengomposan, pertanian tanpa olah tanah, dan gunakan pupuk hijau untuk memperkaya nutrisi tanah.  
+
+<h1>5. Buang Sampah pada Tempatnya</h1>  
+Pastikan sampah dibuang di lokasi yang aman, jauh dari permukiman, dan dukung penegakan aturan kebersihan.  
+
+Dengan langkah-langkah ini, kita bisa mengurangi pencemaran tanah dan menjaga lingkungan untuk masa depan. 🌱  
+
+<h1>Ayo mulai sekarang!💚</h1></p>
+        
+        <button id="toggleKomentarBtn">Tampilkan Komentar</button>
+        
+        <section id="komentarSection">
+            <h3>Komentar</h3>
+            
+            <div class="komentar">
+                <strong>Iman</strong> - <em>15 Mei 2025</em>
+                <p>Artikel yang sangat bermanfaat, terima kasih!</p>
+            </div>
+            
+            <div class="komentar">
+                <strong>Alucard</strong> - <em>14 Mei 2025</em>
+                <p>Saya setuju dengan menjaga lingkungan.</p>
+            </div>
+            
+            <div class="komentar">
+                <strong>Nana</strong> - <em>13 Mei 2025</em>
+                <p>Sangat menarik artikel tersebut</p>
+            </div>
+        </section>
+    </article>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleKomentarBtn');
+            const komentarSection = document.getElementById('komentarSection');
+            let komentarDitampilkan = false;
+            
+            toggleBtn.addEventListener('click', function() {
+                if (komentarDitampilkan) {
+                    komentarSection.style.display = 'none';
+                    toggleBtn.textContent = 'Tampilkan Komentar';
+                    komentarDitampilkan = false;
+                } else {
+                    komentarSection.style.display = 'block';
+                    toggleBtn.textContent = 'Sembunyikan Komentar';
+                    komentarDitampilkan = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
